@@ -28,9 +28,9 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    background-color: #146814;
+    background-color: #a3e5a3;
 
-    /* min-width: 970px; */
+    min-width: 100vh;
 `;
 
 const MainTitle = styled.h1``;

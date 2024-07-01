@@ -15,4 +15,11 @@ export const SectionTitle = (props: SectionTitlePropsType) => {
     );
 };
 
-const StyledSectionTitle = styled.div``;
+const StyledSectionTitle = styled.div`
+    text-align: center;
+
+    p {
+      margin: 0 auto;
+      max-width: 438px;
+    }
+`;
