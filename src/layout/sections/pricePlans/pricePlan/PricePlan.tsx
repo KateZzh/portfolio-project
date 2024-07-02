@@ -32,7 +32,7 @@ export const PricePlan = (props: PricePlanPropsType) => {
 
             <List listItems={fullPlanItems} />
 
-            <Button />
+            <Button title='ORDER NOW'/>
         </StyledPricePlan>
     );
 };

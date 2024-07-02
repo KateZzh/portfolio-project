@@ -1,11 +1,11 @@
 import React from 'react';
 import { Icon } from '../icon/Icon';
 
-export const Button = () => {
+export const Button = (props: {title: string, type?: 'submit' | 'button'}) => {
     return (
-        <button>
+        <button type={props.type}> 
             <a href=''>
-                HIRE ME <Icon iconId='btnArrow' width='16' height='16' />
+                {props.title} <Icon iconId='btnArrow' width='16' height='16' />
             </a>
         </button>
     );
