@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Icon } from '../icon/Icon';
-import { Menu } from '../menu/Menu';
+
+
+import { Icon } from '../../components/icon/Icon';
+import { Menu } from '../../components/menu/Menu';
 
 const items = ['home', 'services', 'education', 'portfolio', 'blog', 'contact'];
 

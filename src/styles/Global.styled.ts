@@ -21,6 +21,7 @@ body {
 
   background-color: ${theme.colors.primaryBg};
   color: ${theme.colors.font};
+  line-height: 1.2;
 }
 
 a {
@@ -36,5 +37,7 @@ button {
   border: none;
 }
 
-section:
+section {
+  margin-bottom: 70px;
+}
 `;

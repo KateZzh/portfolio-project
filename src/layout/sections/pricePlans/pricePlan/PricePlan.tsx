@@ -21,6 +21,23 @@ const fullPlanItems = [
     '20 gB bandwith',
 ];
 
+// const fullPlanItems = [
+//     {
+//         title: 'UI Design',
+//         isAllowed: true
+//     }
+
+//     'UI Design',
+//     'web development',
+//     'logo design',
+//     'seo optimization',
+//     'wordPress integration',
+//     '5 Websites',
+//     'unlimited user',
+//     '20 gB bandwith',
+// ];
+
+
 export const PricePlan = (props: PricePlanPropsType) => {
     return (
         <StyledPricePlan>

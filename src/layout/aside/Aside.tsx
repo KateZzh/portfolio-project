@@ -1,14 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FlexWrapper } from '../FlexWrapper';
-import { Icon } from '../icon/Icon';
+import { FlexWrapper } from '../../components/FlexWrapper'; 
+import { Icon } from '../../components/icon/Icon'; 
 import photo from '../../assets/images/photo.webp';
-import { Menu } from '../menu/Menu';
-import { List } from '../list/List';
-import { Button } from '../button/Button';
+import { Menu } from '../../components/menu/Menu'; 
+import { List } from '../../components/list/List';
+import { Button } from '../../components/button/Button'; 
+import { theme } from '../../styles/Theme';
 
 const socialItems = ['facebook', 'instagram', 'twitter', 'dribbble', 'youtube'];
 const listItems = ['Bootstrap, Materialize', 'Stylus, Sass, Less', 'Gulp, Webpack, Grunt', 'GIT Knowledge'];
+
+const InfoItem = () => {
+    return (
+        <FlexWrapper justify='space-between'>
+        <Name>Age:</Name>
+        <Info>24</Info>
+    </FlexWrapper>
+    )
+}
 
 export const Aside = () => {
     return (
@@ -107,9 +117,16 @@ export const Aside = () => {
 };
 
 const StyledAside = styled.aside`
-    background-color: #8787ce;
-    /* max-width: 305px;
-    width: 100%;  */
+    background-color: ${theme.colors.secondaryBg};
+    max-width: 305px;
+    width: 100%; 
+    padding: 50px 45px 25px 40px;
+    min-height: 100vh;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999; */
 `;
 
 const MainInfo = styled.div``;
@@ -137,7 +154,7 @@ const Name = styled.span`
 const Info = styled.span``;
 
 const Skills = styled.div``;
-const Title = styled.h4``;
+const Title = styled.h3``;
 const Skill = styled.span``;
 const Level = styled.span``;
 const ProgressBar = styled.div`

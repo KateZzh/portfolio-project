@@ -1,14 +1,15 @@
 import './App.css';
 import styled from 'styled-components';
-import { Aside } from './components/aside/Aside';
+
 import { FlexWrapper } from './components/FlexWrapper';
 import { Main } from './layout/sections/main/Main';
-import { Nav } from './components/nav/Nav';
+import { Aside } from './layout/aside/Aside';
+import { Nav } from './layout/nav/Nav';
 
 function App() {
     return (
         <div className='App'>
-            <FlexWrapper>
+            <FlexWrapper justify='space-between'>
                 <Aside />
                 <Main />
                 <Nav />

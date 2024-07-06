@@ -7,19 +7,21 @@ import photo1 from '../../../assets/images/recommendation-1.webp';
 import photo2 from '../../../assets/images/recommendation-2.webp';
 import photo3 from '../../../assets/images/recommendation-3.webp';
 import { Slider } from '../../../components/slider/Slider';
+import { Container } from '../../../components/Container';
 
 export const Recommendations = () => {
     return (
         <StyledRecommendations>
-            <SectionTitle
-                title='recommendations'
-                description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
-            />
+            <Container>
+                <SectionTitle
+                    title='recommendations'
+                    description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
+                />
 
-            <FlexWrapper wrap='wrap' justify='center'>
-                <Slider />
-            </FlexWrapper>
-            {/* <FlexWrapper wrap='wrap' justify='space-between'>
+                <FlexWrapper wrap='wrap' justify='center'>
+                    <Slider />
+                </FlexWrapper>
+                {/* <FlexWrapper wrap='wrap' justify='space-between'>
                 <Recommendation
                     title='Great Quality!'
                     text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....'
@@ -42,6 +44,7 @@ export const Recommendations = () => {
                     profession='Business man'
                 />
             </FlexWrapper> */}
+            </Container>
         </StyledRecommendations>
     );
 };

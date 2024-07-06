@@ -1,27 +1,28 @@
-import React from 'react';
 import styled from 'styled-components';
+
 import photo from '../../assets/images/photo.webp';
-import { Button } from '../../components/button/Button';
-import { FlexWrapper } from '../../components/FlexWrapper';
+import { theme } from '../../styles/Theme';
 import { Container } from '../../components/Container';
+import { FlexWrapper } from '../../components/FlexWrapper';
+import { Button } from '../../components/button/Button';
 
 export const Header = () => {
     return (
-        <StyledHeader>
+        <StyledHeader id="home">
             <Container>
-                <FlexWrapper align='center'>
-                    <div>
+                <FlexWrapper align='center' justify='space-between'>
+                    <Wrapper>
                         <Name>I’m Rayan Adlrdard </Name>
                         <MainTitle>
                             <span>Front-end </span>Developer
                         </MainTitle>
-                        <p>
+                        <Description>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed
                             suspendisse nunc lectus.
-                        </p>
+                        </Description>
 
                         <Button title='HIRE ME' />
-                    </div>
+                    </Wrapper>
 
                     <Photo src={photo} alt='mainPhoto' />
                 </FlexWrapper>
@@ -31,14 +32,39 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    background-color: #a3e5a3;
-
-    min-width: 100vh;
+    background-color: ${theme.colors.secondaryBg};
+    margin-bottom: 138px;
 `;
 
-const MainTitle = styled.h1``;
+const Wrapper = styled.div`
+    max-width: 500px;
+    width: 100%;
+`;
 
-const Name = styled.h2``;
+const Name = styled.h2`
+    font-size: 48px;
+    font-weight: 700;
+`;
+
+const MainTitle = styled.h1`
+    font-size: 48px;
+    font-weight: 700;
+
+    span {
+        color: ${theme.colors.accent};
+    }
+`;
+
+const Description = styled.p`
+    margin: 18px 0 25px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: #767676;
+    max-width: 425px;
+`;
 
 const Photo = styled.img`
     width: 326px;
