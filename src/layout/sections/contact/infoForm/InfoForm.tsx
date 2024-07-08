@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button } from '../../../../components/button/Button';
+import { theme } from '../../../../styles/Theme';
 
 export const InfoForm = () => {
     return (
@@ -9,22 +10,22 @@ export const InfoForm = () => {
 
             <StyledForm>
                 <Label>
-                    Your Full Name ( Required)
+                    <Name>Your Full Name ( Required)</Name>
                     <Field />
                 </Label>
 
                 <Label>
-                    Your Email ( Required)
+                    <Name>Your Email ( Required)</Name>
                     <Field id='email' />
                 </Label>
 
                 <Label>
-                    Subject
+                    <Name>Subject</Name>
                     <Field id='subject' />
                 </Label>
 
                 <Label>
-                    Your Message
+                    <Name>Your Message</Name>
                     <Field as={'textarea'} id='message' />
                 </Label>
 
@@ -39,13 +40,33 @@ const StyledInfoForm = styled.div`
     width: 100%;
 `;
 
+const Title = styled.h2`
+    margin-bottom: 50px;
+    text-transform: capitalize;
+`;
+
 const StyledForm = styled.form`
+    background-color: ${theme.colors.secondaryBg};
     max-width: 570px;
-    width: 100%;
+    padding: 25px 24px 25px 25px;
+`;
+
+const Label = styled.label`
     display: flex;
     flex-direction: column;
-    gap: 10px;
 `;
-const Title = styled.h2``;
-const Label = styled.label``;
-const Field = styled.input``;
+
+const Name = styled.span`
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: ${theme.colors.fontSecondary};
+    margin-bottom: 8px;
+`;
+
+const Field = styled.input`
+    height: 50px;
+    background: ${theme.colors.primaryBg};
+    border: none;
+    margin-bottom: 25px;
+`;

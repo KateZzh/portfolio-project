@@ -1,25 +1,31 @@
-import React from 'react';
 import styled from 'styled-components';
+import { Link } from '../../../../components/Link';
+import { theme } from '../../../../styles/Theme';
 
-type BlogCardPropsType = {
+type BlogCardItems = {
+    id: string;
     src: string;
     title: string;
     text: string;
 };
 
-export const BlogCard = (props: BlogCardPropsType) => {
+type BlogCardPropsType = {
+    item: BlogCardItems;
+};
+
+export const BlogCard = ({ item }: BlogCardPropsType) => {
     return (
         <StyledBlogCard>
-            <Image src={props.src} />
-            <Title>{props.title}</Title>
-            <Text>{props.text}</Text>
+            <Image src={item.src} />
+            <Title>{item.title}</Title>
+            <Text>{item.text}</Text>
             <Link href='#'>Learn more</Link>
         </StyledBlogCard>
     );
 };
 
 const StyledBlogCard = styled.div`
-    border: 1px solid red;
+    background-color: ${theme.colors.secondaryBg};
     max-width: 310px;
     width: 100%;
 `;
@@ -30,5 +36,5 @@ const Image = styled.img`
 `;
 
 const Title = styled.h3``;
+
 const Text = styled.p``;
-const Link = styled.a``;

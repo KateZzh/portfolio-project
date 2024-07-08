@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
 import { FlexWrapper } from '../../../components/FlexWrapper';
@@ -8,6 +7,27 @@ import image2 from '../../../assets/images/portfolio-2.webp';
 import image3 from '../../../assets/images/portfolio-3.webp';
 import { BlogCard } from './blogCard/BlogCard';
 import { Container } from '../../../components/Container';
+
+const blogCardItems = [
+    {
+        id: '1',
+        src: image1,
+        title: 'How to make web tempates',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna',
+    },
+    {
+        id: '2',
+        src: image2,
+        title: 'make Business card',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna',
+    },
+    {
+        id: '3',
+        src: image3,
+        title: 'How to make Flyer Design',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna',
+    },
+];
 
 export const Blog = () => {
     return (
@@ -19,28 +39,13 @@ export const Blog = () => {
                 />
 
                 <FlexWrapper wrap='wrap' justify='space-between'>
-                    <BlogCard
-                        src={image1}
-                        title='How to make web tempates'
-                        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna '
-                    />
-                    <BlogCard
-                        src={image2}
-                        title='make Business card'
-                        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna '
-                    />
-                    <BlogCard
-                        src={image3}
-                        title='How to make Flyer Design'
-                        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna '
-                    />
+                    {blogCardItems.map((item) => (
+                        <BlogCard item={item} key={item.id} />
+                    ))}
                 </FlexWrapper>
             </Container>
         </StyledBlog>
     );
 };
 
-const StyledBlog = styled.section`
-    background-color: #d79e86;
-    min-height: 50vh;
-`;
+const StyledBlog = styled.section``;

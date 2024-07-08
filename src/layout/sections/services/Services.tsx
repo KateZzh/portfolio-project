@@ -1,9 +1,17 @@
-import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
 import { Service } from './service/Service';
 import { Container } from '../../../components/Container';
+
+const servicesItems = [
+    { id: 1, iconId: 'coding', width: '68', height: '68', title: 'Web Development', directions: 'Blog, E-Commerce' },
+    { id: 2, iconId: 'illustration', width: '68', height: '68', title: 'UI/UX Design', directions: 'Mobile App, Website Design' },
+    { id: 3, iconId: 'microphone', width: '74', height: '74', title: 'Sound Design', directions: 'Voice Over, Beat Making' },
+    { id: 4, iconId: 'gameDevelopment', width: '74', height: '74', title: 'Game Design', directions: 'Character Design, Props & Objects' },
+    { id: 5, iconId: 'photographer', width: '78', height: '78', title: 'Photography', directions: 'Portrait, Product Photography' },
+    { id: 6, iconId: 'ad-pop-up', width: '74', height: '74', title: 'Something else...', directions: 'Something else...' },
+];
 
 export const Services = () => {
     return (
@@ -14,13 +22,17 @@ export const Services = () => {
                     description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
                 />
 
-                <FlexWrapper wrap='wrap' justify='space-between'>
-                    <Service iconId='coding' width='68' height='68' title='Web Development' directions='Blog, E-Commerce' />
-                    <Service iconId='illustration' width='68' height='68' title='UI/UX Design' directions='Mobile App, Website Design' />
-                    <Service iconId='microphone' width='74' height='74' title='Sound Design' directions='Voice Over, Beat Making' />
-                    <Service iconId='gameDevelopment' width='74' height='74' title='Game Design' directions='Character Design, Props & Objects' />
-                    <Service iconId='photographer' width='78' height='78' title='Photography' directions='Portrait, Product Photography' />
-                    <Service iconId='ad-pop-up' width='74' height='74' title='Something else...' directions='Something else...' />
+                <FlexWrapper wrap='wrap' justify='space-between' gap='20px'>
+                    {servicesItems.map((item) => (
+                        <Service
+                            key={item.id}
+                            iconId={item.iconId}
+                            width={item.width}
+                            height={item.height}
+                            title={item.title}
+                            directions={item.directions}
+                        />
+                    ))}
 
                     {/* <ServiceSecondary>
                     <h3>Advertising</h3>
@@ -33,10 +45,7 @@ export const Services = () => {
     );
 };
 
-const StyledServices = styled.section`
-    background-color: #bfd6ea;
-    max-height: 100vh;
-`;
+const StyledServices = styled.section``;
 
 // const ServiceSecondary = styled.div`
 //     width: 33%;

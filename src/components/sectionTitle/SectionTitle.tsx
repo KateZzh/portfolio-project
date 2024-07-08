@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 type SectionTitlePropsType = {
@@ -9,17 +8,23 @@ type SectionTitlePropsType = {
 export const SectionTitle = (props: SectionTitlePropsType) => {
     return (
         <StyledSectionTitle>
-            <h2>{props.title}</h2>
-            <p>{props.description}</p>
+            <Title>{props.title}</Title>
+            <Description>{props.description}</Description>
         </StyledSectionTitle>
     );
 };
 
 const StyledSectionTitle = styled.div`
     text-align: center;
+`;
 
-    p {
-      margin: 0 auto;
-      max-width: 438px;
-    }
+const Title = styled.h2`
+    text-transform: capitalize;
+`;
+
+const Description = styled.p`
+    line-height: 1.6;
+    text-transform: capitalize;
+    margin: 25px auto 50px;
+    max-width: 438px;
 `;

@@ -43,7 +43,6 @@ const Wrapper = styled.div`
 
 const Name = styled.h2`
     font-size: 48px;
-    font-weight: 700;
 `;
 
 const MainTitle = styled.h1`
@@ -57,12 +56,9 @@ const MainTitle = styled.h1`
 
 const Description = styled.p`
     margin: 18px 0 25px;
-
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     text-transform: capitalize;
-    color: #767676;
     max-width: 425px;
 `;
 

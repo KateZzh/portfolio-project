@@ -26,6 +26,7 @@ body {
 
 a {
   text-decoration: none;
+  color: ${theme.colors.font};
 }
 
 ul {
@@ -39,5 +40,23 @@ button {
 
 section {
   margin-bottom: 70px;
+}
+
+h2 {
+  font-weight: 700;
+    font-size: 32px;
+    color: ${theme.colors.font};
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 18px;
+  color: ${theme.colors.font};
+}
+
+p {
+  font-weight: 400;
+    font-size: 15px;
+    color: ${theme.colors.fontSecondary};
 }
 `;
