@@ -38,7 +38,7 @@ export const Blog = () => {
                     description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
                 />
 
-                <FlexWrapper wrap='wrap' justify='space-between'>
+                <FlexWrapper wrap='wrap' justify='space-between' align='flex-start' gap='20px'>
                     {blogCardItems.map((item) => (
                         <BlogCard item={item} key={item.id} />
                     ))}

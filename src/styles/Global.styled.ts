@@ -26,7 +26,7 @@ body {
 
 a {
   text-decoration: none;
-  color: ${theme.colors.font};
+
 }
 
 ul {
@@ -34,8 +34,10 @@ ul {
 }
 
 button {
+  cursor: pointer;
   background-color: unset;
   border: none;
+  color: ${theme.colors.font};
 }
 
 section {

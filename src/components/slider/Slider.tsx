@@ -110,5 +110,6 @@ const Pagination = styled.div`
         height: 10px;
         margin: 5px;
         background-color: #ffb400;
+        border-radius: 100%;
     }
 `;

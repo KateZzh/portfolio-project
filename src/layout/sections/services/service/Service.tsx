@@ -27,9 +27,11 @@ export const Service = (props: ServicePropsType) => {
 
 const StyledService = styled.div`
     width: 310px;
-    height: 225px;
-    padding: 30px 0;
+    min-height: 225px;
+    /* height: 100%; */
+    padding: 25px 10px 10px;
     background-color: ${theme.colors.secondaryBg};
+    text-align: center;
 `;
 
 const Title = styled.h3`
@@ -46,4 +48,5 @@ const Info = styled.span`
     line-height: 1.6;
     text-transform: capitalize;
     color: ${theme.colors.fontSecondary};
+
 `;

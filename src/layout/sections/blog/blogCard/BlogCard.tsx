@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link } from '../../../../components/Link';
 import { theme } from '../../../../styles/Theme';
+import { Icon } from '../../../../components/icon/Icon';
+// import IconSVG from '../../../../assets/images/for-link.svg';
 
 type BlogCardItems = {
     id: string;
@@ -17,9 +19,15 @@ export const BlogCard = ({ item }: BlogCardPropsType) => {
     return (
         <StyledBlogCard>
             <Image src={item.src} />
-            <Title>{item.title}</Title>
-            <Text>{item.text}</Text>
-            <Link href='#'>Learn more</Link>
+
+            <Wrapper>
+                <Title>{item.title}</Title>
+                <Text>{item.text}</Text>
+
+                <Link href='#'>
+                    Learn more <Icon iconId='for-link' width='20px' height='20px' viewBox='0 0 20 20' />
+                </Link>
+            </Wrapper>
         </StyledBlogCard>
     );
 };
@@ -35,6 +43,23 @@ const Image = styled.img`
     object-fit: cover;
 `;
 
-const Title = styled.h3``;
+const Wrapper = styled.div`
+    padding: 25px 36px 16px 25px;
 
-const Text = styled.p``;
+    & > a {
+        display: flex;
+        align-items: center;
+        color: ${theme.colors.accent};
+    }
+`;
+
+const Title = styled.h3`
+    text-transform: capitalize;
+`;
+
+const Text = styled.p`
+    margin: 8px 0;
+
+    line-height: 1.6;
+    text-transform: capitalize;
+`;

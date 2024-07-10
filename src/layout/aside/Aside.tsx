@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FlexWrapper } from '../../components/FlexWrapper'; 
-import { Icon } from '../../components/icon/Icon'; 
+import { FlexWrapper } from '../../components/FlexWrapper';
+import { Icon } from '../../components/icon/Icon';
 import photo from '../../assets/images/photo.webp';
-import { Menu } from '../../components/menu/Menu'; 
+import { Menu } from '../../components/menu/Menu';
 import { List } from '../../components/list/List';
-import { Button } from '../../components/button/Button'; 
+import { Button } from '../../components/button/Button';
 import { theme } from '../../styles/Theme';
 
 const socialItems = ['facebook', 'instagram', 'twitter', 'dribbble', 'youtube'];
@@ -14,11 +14,11 @@ const listItems = ['Bootstrap, Materialize', 'Stylus, Sass, Less', 'Gulp, Webpac
 const InfoItem = () => {
     return (
         <FlexWrapper justify='space-between'>
-        <Name>Age:</Name>
-        <Info>24</Info>
-    </FlexWrapper>
-    )
-}
+            <Name>Age:</Name>
+            <Info>24</Info>
+        </FlexWrapper>
+    );
+};
 
 export const Aside = () => {
     return (
@@ -26,7 +26,7 @@ export const Aside = () => {
             <MainInfo>
                 <Image src={photo} alt='photo' />
                 <Title>Rayan Adlardard</Title>
-                <Info>Font-end Developer</Info>
+                <Position>Font-end Developer</Position>
 
                 {/* <Menu menuItems={socialItems}/> */}
                 <SocialList>
@@ -119,7 +119,7 @@ export const Aside = () => {
 const StyledAside = styled.aside`
     background-color: ${theme.colors.secondaryBg};
     max-width: 305px;
-    width: 100%; 
+    width: 100%;
     padding: 50px 45px 25px 40px;
     min-height: 100vh;
     /* position: fixed;
@@ -154,7 +154,8 @@ const Name = styled.span`
 const Info = styled.span``;
 
 const Skills = styled.div``;
-const Title = styled.h3``;
+const Title = styled.h2``;
+const Position = styled.span``;
 const Skill = styled.span``;
 const Level = styled.span``;
 const ProgressBar = styled.div`
