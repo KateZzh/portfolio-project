@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
-import { Service } from './service/Service';
+import { Service } from './myService/Service';
 import { Container } from '../../../components/Container';
 
 const servicesItems = [

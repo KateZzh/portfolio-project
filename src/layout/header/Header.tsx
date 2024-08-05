@@ -8,13 +8,13 @@ import { Button } from '../../components/button/Button';
 
 export const Header = () => {
     return (
-        <StyledHeader id="home">
+        <StyledHeader id='home'>
             <Container>
                 <FlexWrapper align='center' justify='space-between'>
                     <Wrapper>
                         <Name>I’m Rayan Adlrdard </Name>
                         <MainTitle>
-                            <span>Front-end </span>Developer
+                            <TitleStyle>Front-end </TitleStyle>Developer
                         </MainTitle>
                         <Description>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed
@@ -48,10 +48,12 @@ const Name = styled.h2`
 const MainTitle = styled.h1`
     font-size: 48px;
     font-weight: 700;
+`;
 
-    span {
-        color: ${theme.colors.accent};
-    }
+const TitleStyle = styled.span`
+    font-size: 48px;
+    font-weight: 700;
+    color: ${theme.colors.accent};
 `;
 
 const Description = styled.p`

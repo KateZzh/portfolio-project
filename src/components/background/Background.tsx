@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../FlexWrapper';
 import { theme } from '../../styles/Theme';
 
-type BackgroundItems = {
+type BackgroundItemsPropsType = {
     id: string;
     title: string;
     status: string;
@@ -11,11 +11,7 @@ type BackgroundItems = {
     description: string;
 };
 
-type BackgroundPropsType = {
-    items: BackgroundItems;
-};
-
-export const Background = ({ items }: BackgroundPropsType) => {
+export const Background = ({ items }: { items: BackgroundItemsPropsType }) => {
     return (
         <StyledBackground>
             <FlexWrapper justify='space-between' gap='20px'>
@@ -79,12 +75,11 @@ const Direction = styled.h3`
 `;
 
 const Duration = styled.span`
-    display: inline-block;
-    width: 110px;
     height: 18px;
-    padding-top: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
     background-color: ${theme.colors.accent};
-    text-align: center;
     border-radius: 1px;
 
     color: #fff;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Header } from '../../header/Header';
-import { Services } from '../services/Services';
+import { Services } from '../myServices/Services';
 import { PricePlans } from '../pricePlans/PricePlans';
 import { Recommendations } from '../recommendations/Recommendations';
 import { Education } from '../education/Education';

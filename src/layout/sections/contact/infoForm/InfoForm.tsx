@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Button } from '../../../../components/button/Button';
 import { theme } from '../../../../styles/Theme';
@@ -10,23 +9,23 @@ export const InfoForm = () => {
 
             <StyledForm>
                 <Label>
-                    <Name>Your Full Name ( Required)</Name>
+                    Your Full Name (Required)
                     <Field />
                 </Label>
 
                 <Label>
-                    <Name>Your Email ( Required)</Name>
-                    <Field id='email' />
+                    Your Email (Required)
+                    <Field />
                 </Label>
 
                 <Label>
-                    <Name>Subject</Name>
-                    <Field id='subject' />
+                    Subject
+                    <Field />
                 </Label>
 
                 <Label>
-                    <Name>Your Message</Name>
-                    <Field as={'textarea'} id='message' />
+                    Your Message
+                    <Field as={'textarea'} />
                 </Label>
 
                 <Button title='send message' type='submit' />
@@ -49,24 +48,37 @@ const StyledForm = styled.form`
     background-color: ${theme.colors.secondaryBg};
     max-width: 570px;
     padding: 25px 24px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    textarea {
+        resize: none;
+        height: 210px;
+        vertical-align: bottom;
+    }
 `;
 
 const Label = styled.label`
-    display: flex;
-    flex-direction: column;
-`;
-
-const Name = styled.span`
+    display: block;
     font-weight: 500;
     font-size: 18px;
     text-transform: capitalize;
     color: ${theme.colors.fontSecondary};
-    margin-bottom: 8px;
 `;
 
 const Field = styled.input`
+    width: 100%;
     height: 50px;
-    background: ${theme.colors.primaryBg};
+    background-color: ${theme.colors.primaryBg};
     border: none;
-    margin-bottom: 25px;
+    padding: 5px 7px;
+    margin-top: 8px;
+    font:
+        400 20px Inter,
+        sans-serif;
+
+    &:focus-visible {
+        outline: 1px solid ${theme.colors.primaryBg};
+    }
 `;

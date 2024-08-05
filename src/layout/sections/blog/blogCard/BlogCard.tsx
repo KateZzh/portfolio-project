@@ -44,7 +44,7 @@ const Image = styled.img`
 `;
 
 const Wrapper = styled.div`
-    padding: 25px 36px 16px 25px;
+    padding: 25px 25px 16px;
 
     & > a {
         display: flex;

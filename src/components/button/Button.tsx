@@ -19,4 +19,6 @@ const StyledButton = styled.button`
     text-transform: uppercase;
     color: ${theme.colors.font};
     background-color: ${theme.colors.accent};
+
+
 `;

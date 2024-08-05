@@ -1,10 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { Icon } from '../../components/icon/Icon';
 import photo from '../../assets/images/photo.webp';
-import { Menu } from '../../components/menu/Menu';
-import { List } from '../../components/list/List';
 import { Button } from '../../components/button/Button';
 import { theme } from '../../styles/Theme';
 
@@ -25,7 +22,7 @@ export const Aside = () => {
         <StyledAside>
             <MainInfo>
                 <Image src={photo} alt='photo' />
-                <Title>Rayan Adlardard</Title>
+                <FullName>Rayan Adlardard</FullName>
                 <Position>Font-end Developer</Position>
 
                 {/* <Menu menuItems={socialItems}/> */}
@@ -107,7 +104,7 @@ export const Aside = () => {
 
                 <ExtraSkills>
                     <Title>Extra Skills</Title>
-                    <List listItems={listItems} />
+                    {/* <List listItems={listItems} /> */}
                 </ExtraSkills>
 
                 <Button title='Download cv' />
@@ -131,6 +128,12 @@ const StyledAside = styled.aside`
 
 const MainInfo = styled.div``;
 
+const FullName = styled.h2`
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: capitalize;
+`;
+
 const SocialLink = styled.a``;
 
 const SocialList = styled.ul`
@@ -149,7 +152,7 @@ const Image = styled.img`
 const AdditionInfo = styled.div``;
 
 const Name = styled.span`
-    background-color: #ffb400;
+    background-color: ${theme.colors.accent};
 `;
 const Info = styled.span``;
 
@@ -159,7 +162,7 @@ const Position = styled.span``;
 const Skill = styled.span``;
 const Level = styled.span``;
 const ProgressBar = styled.div`
-    border: 1px solid #ffb400;
+    border: 1px solid ${theme.colors.accent};
 `;
 
 const ExtraSkills = styled.div``;

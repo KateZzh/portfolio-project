@@ -10,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
 }
 
-
 body {
   margin: 0;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -26,7 +25,7 @@ body {
 
 a {
   text-decoration: none;
-
+  cursor: pointer;
 }
 
 ul {
@@ -34,6 +33,9 @@ ul {
 }
 
 button {
+  /* padding: 0;
+  margin: 0; */
+
   cursor: pointer;
   background-color: unset;
   border: none;
@@ -46,8 +48,8 @@ section {
 
 h2 {
   font-weight: 700;
-    font-size: 32px;
-    color: ${theme.colors.font};
+  font-size: 32px;
+  color: ${theme.colors.font};
 }
 
 h3 {
@@ -58,7 +60,13 @@ h3 {
 
 p {
   font-weight: 400;
-    font-size: 15px;
-    color: ${theme.colors.fontSecondary};
+  font-size: 15px;
+  color: ${theme.colors.fontSecondary};
+}
+
+span {
+  font-weight: 400;
+  font-size: 15px;
+  color: ${theme.colors.font};
 }
 `;

@@ -4,7 +4,7 @@ import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
 import { theme } from '../../../styles/Theme';
 import { Background } from '../../../components/background/Background';
 
-const backgroundsItems = [
+const backgroundItems = [
     {
         id: '1',
         title: 'University of Toronto',
@@ -39,12 +39,12 @@ export const WorkHistory = () => {
         <StyledWorkHistory>
             <Container>
                 <SectionTitle
-                    title='Education'
+                    title='Work History'
                     description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
                 />
 
                 <Backgrounds>
-                    {backgroundsItems.map((items) => (
+                    {backgroundItems.map((items) => (
                         <Background items={items} key={items.id} />
                     ))}
                 </Backgrounds>
