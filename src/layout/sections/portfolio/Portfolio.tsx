@@ -36,7 +36,7 @@ export const Portfolio = () => {
                             <Image src={item} alt={item} />
 
                             <IconWrapper>
-                                <Icon iconId='plus' width='52' height='52' viewBox='0 0 52 52' />
+                                <Icon iconId='plus' width='52' height='52' />
                             </IconWrapper>
                         </ImageWrapper>
                     ))}

@@ -33,7 +33,7 @@ export const PricePlan = ({ priceCard }: { priceCard: priceCardPropsType }) => {
 
             <List listItems={priceCard.planItems} />
 
-            <Button title='ORDER NOW' />
+            <Button title='ORDER NOW' btnType={priceCard.type === 'popular' ? 'secondary' : 'secondaryWhite'}/>
         </StyledPricePlan>
     );
 };

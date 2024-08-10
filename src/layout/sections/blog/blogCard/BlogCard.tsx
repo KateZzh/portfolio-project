@@ -25,7 +25,7 @@ export const BlogCard = ({ item }: BlogCardPropsType) => {
                 <Text>{item.text}</Text>
 
                 <Link href='#'>
-                    Learn more <Icon iconId='for-link' width='20px' height='20px' viewBox='0 0 20 20' />
+                    Learn more <Icon iconId='for-link' width='20px' height='20px' />
                 </Link>
             </Wrapper>
         </StyledBlogCard>

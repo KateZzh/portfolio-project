@@ -9,7 +9,7 @@ export const List = ({ listItems }: { listItems: planItemsType[] }) => {
             {listItems.map((el, index) => {
                 return (
                     <ListItem key={index} flag={el.isAllowed}>
-                        <Icon iconId={el.isAllowed ? 'check' : 'close'} width='24' height='24' viewBox='0 0 24 24' />
+                        <Icon iconId={el.isAllowed ? 'check' : 'close'} width='24' height='24' />
                         {el.title}
                     </ListItem>
                 );

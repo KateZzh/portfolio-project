@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '../icon/Icon';
 
@@ -24,6 +23,6 @@ const StyledMenu = styled.nav`
     ul {
         display: flex;
         flex-direction: column;
-        gap: 43px;
+        gap: 60px;
     }
 `;

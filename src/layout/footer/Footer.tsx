@@ -8,8 +8,8 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <FlexWrapper justify='center' align='center' gap='15px'>
-                    <Icon iconId='copyright' width='24' height='24' viewBox='0 0 24 24' />
+                <FlexWrapper justify='center' align='center' gap='15px' backgroundColor={theme.colors.secondaryBg} padding='18px 0'>
+                    <Icon iconId='copyright' width='24' height='24' />
                     <Copyright>2021 All Rights Reserved.Ojjomedia</Copyright>
                 </FlexWrapper>
             </Container>
@@ -17,10 +17,7 @@ export const Footer = () => {
     );
 };
 
-const StyledFooter = styled.footer`
-    background-color: ${theme.colors.secondaryBg};
-    padding: 18px 0;
-`;
+const StyledFooter = styled.footer``;
 
 const Copyright = styled.small`
     font-weight: 400;

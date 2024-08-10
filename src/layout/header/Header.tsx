@@ -10,7 +10,7 @@ export const Header = () => {
     return (
         <StyledHeader id='home'>
             <Container>
-                <FlexWrapper align='center' justify='space-between'>
+                <FlexWrapper align='center' justify='space-between' backgroundColor={theme.colors.secondaryBg}>
                     <Wrapper>
                         <Name>I’m Rayan Adlrdard </Name>
                         <MainTitle>
@@ -21,7 +21,7 @@ export const Header = () => {
                             suspendisse nunc lectus.
                         </Description>
 
-                        <Button title='HIRE ME' />
+                        <Button title='HIRE ME' iconId='btnArrow' btnType='primary'/>
                     </Wrapper>
 
                     <Photo src={photo} alt='mainPhoto' />
@@ -32,13 +32,13 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    background-color: ${theme.colors.secondaryBg};
     margin-bottom: 138px;
 `;
 
 const Wrapper = styled.div`
-    max-width: 500px;
+    max-width: 560px;
     width: 100%;
+    padding-left: 60px;
 `;
 
 const Name = styled.h2`

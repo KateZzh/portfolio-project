@@ -17,7 +17,7 @@ export const Service = (props: ServicePropsType) => {
     return (
         <StyledService>
             <FlexWrapper direction='column' align='center'>
-                <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={`0 0 ${props.width} ${props.height}`} />
+                <Icon iconId={props.iconId} width={props.width} height={props.height} />
                 <Title>{props.title}</Title>
                 <Info>{props.directions}</Info>
             </FlexWrapper>

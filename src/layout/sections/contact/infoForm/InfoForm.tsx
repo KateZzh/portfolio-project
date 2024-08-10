@@ -28,7 +28,7 @@ export const InfoForm = () => {
                     <Field as={'textarea'} />
                 </Label>
 
-                <Button title='send message' type='submit' />
+                <Button title='send message' btnType='submit' />
             </StyledForm>
         </StyledInfoForm>
     );
