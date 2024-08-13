@@ -3,13 +3,13 @@ import { theme } from '../../../styles/Theme';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Subtitle } from '../Subtitle';
 
-type Knowledge = {
+type KnowledgeType = {
     skill: string;
     level: string;
 };
 
 type KnowledgePropsType = {
-    knowledge: Knowledge[];
+    knowledge: KnowledgeType[];
     subtitle: string;
 };
 
@@ -38,9 +38,15 @@ export const Knowledge = ({ knowledge, subtitle }: KnowledgePropsType) => {
 const StyledKnowledge = styled.div`
     padding: 25px 0;
     border-bottom: 2px solid ${theme.colors.primaryBg};
+
+    & > div:last-child{
+        padding-bottom: 0;
+    }
 `;
 
-const KnowledgeWrapper = styled.div``;
+const KnowledgeWrapper = styled.div`
+    padding-bottom: 10px;
+`;
 
 const ProgressBar = styled.div`
     width: 100%;

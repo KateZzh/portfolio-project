@@ -8,7 +8,7 @@ const items = ['home', 'services', 'education', 'portfolio', 'blog', 'contact'];
 export const Nav = () => {
     return (
         <StyledNav>
-            <Icon iconId='contrast' width='30' height='30' />
+            <Icon iconId='contrast' width="30" height="30" />
             <Menu menuItems={items} />
         </StyledNav>
     );

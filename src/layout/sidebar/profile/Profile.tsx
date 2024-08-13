@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import photo from '../../../assets/images/photo.webp';
+import photo from '../../../assets/images/photo-sidebar.jpeg';
 import { Icon } from '../../../components/icon/Icon';
 import { theme } from '../../../styles/Theme';
 import { Subtitle } from '../Subtitle';
@@ -39,13 +39,6 @@ const Image = styled.img`
     border-radius: 50%;
     margin-bottom: 30px;
 `;
-
-// const SidebarTitle = styled.h2`
-//     font-weight: 500;
-//     font-size: 18px;
-//     text-transform: capitalize;
-//     padding-bottom: 15px;
-// `;
 
 const Position = styled.span`
     line-height: 1.6;

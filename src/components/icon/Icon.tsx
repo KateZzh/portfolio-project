@@ -6,16 +6,18 @@ type IconPropsType = {
     width?: string;
     height?: string;
     fill?: string;
+    stroke?: string;
 };
 
-export const Icon = ({ iconId, width, height, fill }: IconPropsType) => {
+export const Icon = ({ iconId, width = '18', height = '18', fill, stroke }: IconPropsType) => {
     return (
         <svg
-            width={width || '18'}
-            height={height || '18'}
-            viewBox={`0 0 ${width} ${height}` || '0 0 18 18'}
+            width={width}
+            height={height}
+            viewBox={`0 0 ${width} ${height}`}
             xmlns='http://www.w3.org/2000/svg'
-            fill={fill || theme.colors.font}
+            fill={fill}
+            stroke={stroke}
         >
             <use xlinkHref={`${iconsSprite}#${iconId}`} />
         </svg>

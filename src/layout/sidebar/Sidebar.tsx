@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { FlexWrapper } from '../../components/FlexWrapper';
 
+import { FlexWrapper } from '../../components/FlexWrapper';
 import { Button } from '../../components/button/Button';
 import { theme } from '../../styles/Theme';
 import { Profile } from './profile/Profile';
 import { Knowledge } from './knowledge/Knowledge';
 import { Subtitle } from './Subtitle';
+import { Icon } from '../../components/icon/Icon';
 
 const extraSkillsItems = ['Bootstrap, Materialize', 'Stylus, Sass, Less', 'Gulp, Webpack, Grunt', 'GIT Knowledge'];
 
@@ -55,7 +56,12 @@ export const Sidebar = () => {
 
                     <ListExtraSkills>
                         {extraSkillsItems.map((el, index) => {
-                            return <ExtraSkillItem key={index}>{el}</ExtraSkillItem>;
+                            return (
+                                <ExtraSkillItem key={index}>
+                                    <Icon iconId='marker' width='15' height='15' fill='none' />
+                                    {el}
+                                </ExtraSkillItem>
+                            );
                         })}
                     </ListExtraSkills>
                 </ExtraSkills>
@@ -122,8 +128,9 @@ const ExtraSkills = styled.div`
 `;
 
 const ListExtraSkills = styled.ul`
-    padding-left: 30px;
-    list-style-type: none;
+    li:not(:last-child) {
+        padding-bottom: 5px;
+    }
 `;
 
 const ExtraSkillItem = styled.li`
@@ -133,29 +140,7 @@ const ExtraSkillItem = styled.li`
     text-transform: capitalize;
     color: ${theme.colors.fontSecondary};
 
-    /* list-style-image: url('../../assets/images/icons-sprite.svg#star'); */
-    background-image: url('../../assets/images/icons-sprite.svg#star');
-    background-size: 15px 15px;
-    background-position: left center;
-    padding-left: 10px;
-    margin-bottom: 5px;
-
-    /* padding-left: 30px;
-    position: relative;
-    z-index: 0;
-    margin-bottom: 5px; */
-
-    /* &::before {
-        content: '';
-        position: absolute;
-        z-index: 1;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 15px;
-        height: 15px;
-        background-image: url('../../assets/images/icons-sprite.svg#close');
-        background-repeat: no-repeat;
-        background-size: contain;
-    } */
+    display: flex;
+    align-items: center;
+    gap: 15px;
 `;
