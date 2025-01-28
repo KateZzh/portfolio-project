@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
 import { Service } from './myService/Service';
-import { Container } from '../../../components/Container';
 
 const servicesItems = [
     { id: 1, iconId: 'coding', width: '68', height: '68', title: 'Web Development', directions: 'Blog, E-Commerce' },
@@ -15,8 +14,7 @@ const servicesItems = [
 
 export const Services = () => {
     return (
-        <StyledServices>
-            <Container>
+        <StyledServices id='services'>
                 <SectionTitle
                     title='My Services'
                     description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
@@ -40,7 +38,6 @@ export const Services = () => {
                     <a href='#'></a>
                 </ServiceSecondary> */}
                 </FlexWrapper>
-            </Container>
         </StyledServices>
     );
 };

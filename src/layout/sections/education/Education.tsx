@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
-import { Container } from '../../../components/Container';
 import { Background } from '../../../components/background/Background';
 import { theme } from '../../../styles/Theme';
 
@@ -36,24 +35,23 @@ const backgroundsItems = [
 
 export const Education = () => {
     return (
-        <StyledEducation>
-            <Container>
-                <SectionTitle
-                    title='Education'
-                    description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
-                />
+        <StyledEducation id='education'>
+            <SectionTitle
+                title='Education'
+                description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
+            />
 
-                <Backgrounds>
-                    {backgroundsItems.map((items) => (
-                        <Background items={items} key={items.id} />
-                    ))}
-                </Backgrounds>
-            </Container>
+            <Backgrounds>
+                {backgroundsItems.map((items) => (
+                    <Background items={items} key={items.id} />
+                ))}
+            </Backgrounds>
         </StyledEducation>
     );
 };
 
-const StyledEducation = styled.section``;
+const StyledEducation = styled.section`
+`;
 
 const Backgrounds = styled.div`
     background-color: ${theme.colors.secondaryBg};

@@ -43,7 +43,9 @@ button {
 }
 
 section {
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
+  padding: 35px 0 35px;
+
 }
 
 h2 {

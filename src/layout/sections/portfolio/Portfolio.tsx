@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
 import { TabMenu } from './tabMenu/TabMenu';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import { Container } from '../../../components/Container';
 import { theme } from '../../../styles/Theme';
 import { Icon } from '../../../components/icon/Icon';
 
@@ -22,26 +21,24 @@ const imageItems = [image1, image2, image3, image4, image5, image6, image7, imag
 export const Portfolio = () => {
     return (
         <StyledPortfolio>
-            <Container>
-                <SectionTitle
-                    title='Portfolio'
-                    description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
-                />
+            <SectionTitle
+                title='Portfolio'
+                description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
+            />
 
-                <TabMenu tabMenuItems={portfolioItems} />
+            <TabMenu tabMenuItems={portfolioItems} />
 
-                <FlexWrapper wrap='wrap' justify='space-between' gap='10px'>
-                    {imageItems.map((item, index) => (
-                        <ImageWrapper key={index}>
-                            <Image src={item} alt={item} />
+            <FlexWrapper wrap='wrap' justify='space-between' gap='10px'>
+                {imageItems.map((item, index) => (
+                    <ImageWrapper key={index}>
+                        <Image src={item} alt={item} />
 
-                            <IconWrapper>
-                                <Icon iconId='plus' width='52' height='52' />
-                            </IconWrapper>
-                        </ImageWrapper>
-                    ))}
-                </FlexWrapper>
-            </Container>
+                        <IconWrapper>
+                            <Icon iconId='plus' width='52' height='52' />
+                        </IconWrapper>
+                    </ImageWrapper>
+                ))}
+            </FlexWrapper>
         </StyledPortfolio>
     );
 };

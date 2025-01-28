@@ -6,7 +6,6 @@ import image1 from '../../../assets/images/portfolio-1.webp';
 import image2 from '../../../assets/images/portfolio-2.webp';
 import image3 from '../../../assets/images/portfolio-3.webp';
 import { BlogCard } from './blogCard/BlogCard';
-import { Container } from '../../../components/Container';
 
 const blogCardItems = [
     {
@@ -31,19 +30,17 @@ const blogCardItems = [
 
 export const Blog = () => {
     return (
-        <StyledBlog>
-            <Container>
-                <SectionTitle
-                    title='Blog'
-                    description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
-                />
+        <StyledBlog id='blog'>
+            <SectionTitle
+                title='Blog'
+                description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
+            />
 
-                <FlexWrapper wrap='wrap' justify='space-between' align='flex-start' gap='20px'>
-                    {blogCardItems.map((item) => (
-                        <BlogCard item={item} key={item.id} />
-                    ))}
-                </FlexWrapper>
-            </Container>
+            <FlexWrapper wrap='wrap' justify='space-between' align='flex-start' gap='20px'>
+                {blogCardItems.map((item) => (
+                    <BlogCard item={item} key={item.id} />
+                ))}
+            </FlexWrapper>
         </StyledBlog>
     );
 };

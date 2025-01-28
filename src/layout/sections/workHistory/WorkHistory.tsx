@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Container } from '../../../components/Container';
 import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
 import { theme } from '../../../styles/Theme';
 import { Background } from '../../../components/background/Background';
@@ -36,19 +35,17 @@ const backgroundItems = [
 
 export const WorkHistory = () => {
     return (
-        <StyledWorkHistory>
-            <Container>
-                <SectionTitle
-                    title='Work History'
-                    description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
-                />
+        <StyledWorkHistory id='portfolio'>
+            <SectionTitle
+                title='Work History'
+                description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
+            />
 
-                <Backgrounds>
-                    {backgroundItems.map((items) => (
-                        <Background items={items} key={items.id} />
-                    ))}
-                </Backgrounds>
-            </Container>
+            <Backgrounds>
+                {backgroundItems.map((items) => (
+                    <Background items={items} key={items.id} />
+                ))}
+            </Backgrounds>
         </StyledWorkHistory>
     );
 };

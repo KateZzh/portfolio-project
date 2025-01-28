@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-import { FlexWrapper } from '../../components/FlexWrapper';
-import { Button } from '../../components/button/Button';
-import { theme } from '../../styles/Theme';
-import { Profile } from './profile/Profile';
-import { Knowledge } from './knowledge/Knowledge';
-import { Subtitle } from './Subtitle';
-import { Icon } from '../../components/icon/Icon';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import { Button } from '../../../components/button/Button';
+import { theme } from '../../../styles/Theme';
+import { Profile } from './../profile/Profile';
+import { Knowledge } from './../knowledge/Knowledge';
+import { Subtitle } from './../Subtitle';
+import { Icon } from '../../../components/icon/Icon';
 
 const extraSkillsItems = ['Bootstrap, Materialize', 'Stylus, Sass, Less', 'Gulp, Webpack, Grunt', 'GIT Knowledge'];
 
@@ -31,14 +31,10 @@ const skillsItems = [
     { skill: 'WordPress', level: '85%' },
 ];
 
-type Props = {
-    handleClose?: () => void;
-};
-
-export const Sidebar = (props: Props) => {
+export const MobileSidebar = () => {
     return (
         <StyledSidebar>
-            <CloseButton onClick={props.handleClose} />
+            <CloseButton />
 
             <SidebarContainer>
                 <Profile />
@@ -88,7 +84,7 @@ const StyledSidebar = styled.aside`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 1;
     overflow-y: auto;
     height: 100vh;
 `;
@@ -100,12 +96,7 @@ const CloseButton = styled.button`
 
     position: absolute;
     top: 20px;
-    left: 250px;
-    z-index: 99;
-
-    @media ${theme.media.tabletXl} {
-        display: block;
-    }
+    right: 25px;
 
     &::before {
         content: '';
@@ -125,6 +116,10 @@ const CloseButton = styled.button`
         background-color: ${theme.colors.accent};
         transform: rotate(45deg) translateY(0);
         position: absolute;
+    }
+
+    @media ${theme.media.tabletXl} {
+        display: block;
     }
 `;
 

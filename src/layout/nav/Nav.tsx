@@ -3,13 +3,26 @@ import { Icon } from '../../components/icon/Icon';
 import { Menu } from '../../components/menu/Menu';
 import { theme } from '../../styles/Theme';
 
-const items = ['home', 'services', 'education', 'portfolio', 'blog', 'contact'];
+export type Item = {
+    id: number;
+    link: string;
+    title: string;
+};
+
+const items: Item[] = [
+    { id: 1, link: 'home', title: 'Home' },
+    { id: 2, link: 'services', title: 'Services' },
+    { id: 3, link: 'education', title: 'Education' },
+    { id: 4, link: 'portfolio', title: 'Work' },
+    { id: 5, link: 'blog', title: 'Blog' },
+    { id: 6, link: 'contact', title: 'Contact' },
+];
 
 export const Nav = () => {
     return (
         <StyledNav>
-            <Icon iconId='contrast' width="30" height="30" />
-            <Menu menuItems={items} />
+            <Icon iconId='contrast' width='30' height='30' />
+            <Menu items={items} />
         </StyledNav>
     );
 };
@@ -22,12 +35,13 @@ const StyledNav = styled.nav`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 225px;
+    justify-content: space-between;
+    gap: 20px;
 
-    padding-top: 50px;
-    /* position: fixed;
+    padding: 50px 0;
+    position: fixed;
     top: 0;
-    left: 0;
     right: 0;
-    z-index: 99999; */
+    bottom: 0;
+    z-index: 9;
 `;

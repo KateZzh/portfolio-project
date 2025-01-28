@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { PricePlan } from './pricePlan/PricePlan';
-import { Container } from '../../../components/Container';
 
 const priceCards = [
     {
@@ -61,7 +60,6 @@ const priceCards = [
 export const PricePlans = () => {
     return (
         <StyledPrice>
-            <Container>
                 <SectionTitle
                     title='Price plans'
                     description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
@@ -72,7 +70,6 @@ export const PricePlans = () => {
                         <PricePlan key={el.id} priceCard={el} />
                     ))}
                 </FlexWrapper>
-            </Container>
         </StyledPrice>
     );
 };
