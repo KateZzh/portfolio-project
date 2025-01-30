@@ -21,6 +21,8 @@ body {
   background-color: ${theme.colors.primaryBg};
   color: ${theme.colors.font};
   line-height: 1.2;
+
+  min-width: 375px;
 }
 
 a {
@@ -33,8 +35,8 @@ ul {
 }
 
 button {
-  /* padding: 0;
-  margin: 0; */
+  padding: 0;
+  margin: 0;
 
   cursor: pointer;
   background-color: unset;

@@ -35,8 +35,7 @@ const StyledNav = styled.nav`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 200px;
 
     padding: 50px 0;
     position: fixed;

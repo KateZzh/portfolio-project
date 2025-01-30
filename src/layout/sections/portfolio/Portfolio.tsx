@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
 import { TabMenu } from './tabMenu/TabMenu';
-import { FlexWrapper } from '../../../components/FlexWrapper';
 import { theme } from '../../../styles/Theme';
 import { Icon } from '../../../components/icon/Icon';
 
@@ -28,7 +27,7 @@ export const Portfolio = () => {
 
             <TabMenu tabMenuItems={portfolioItems} />
 
-            <FlexWrapper wrap='wrap' justify='space-between' gap='10px'>
+            <GridWrapper>
                 {imageItems.map((item, index) => (
                     <ImageWrapper key={index}>
                         <Image src={item} alt={item} />
@@ -38,40 +37,45 @@ export const Portfolio = () => {
                         </IconWrapper>
                     </ImageWrapper>
                 ))}
-            </FlexWrapper>
+            </GridWrapper>
         </StyledPortfolio>
     );
 };
 
 const StyledPortfolio = styled.section``;
 
+const GridWrapper = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-auto-rows: 300px;
+    justify-content: center;
+    gap: 20px;
+
+    @media ${theme.media.mobile} {
+        grid-template-columns: repeat(auto-fit, 310px);
+    }
+`;
+
 const IconWrapper = styled.div``;
 
 const ImageWrapper = styled.div`
-    height: 300px;
-    width: 305px;
+    height: 100%;
+    width: 100%;
 
     position: relative;
     z-index: 0;
 
-    &:hover {
-        cursor: pointer;
+    &::after {
+        display: none;
+        content: '';
+        background-color: ${theme.colors.accent};
+        opacity: 0.9;
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            background-color: ${theme.colors.accent};
-            opacity: 0.9;
-        }
-
-        ${IconWrapper} {
-            display: block;
-        }
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
 
     ${IconWrapper} {
@@ -82,6 +86,29 @@ const ImageWrapper = styled.div`
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &::after {
+            display: block;
+        }
+
+        ${IconWrapper} {
+            display: block;
+        }
+    }
+
+    @media ${theme.media.tablet} {
+        &::after {
+            display: block;
+            opacity: 0.7;
+        }
+
+        ${IconWrapper} {
+            display: block;
+        }
     }
 `;
 

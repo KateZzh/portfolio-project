@@ -1,25 +1,26 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import photo from '../../assets/images/photo.webp';
 import headerBackground from '../../assets/images/header-background.svg';
 import { theme } from '../../styles/Theme';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { Button } from '../../components/button/Button';
+import { font } from '../../styles/Common';
 
 type Props = {
     isOpen: boolean;
-    handleOpen: () => void
+    handleOpen: () => void;
 };
 
 export const Header = ({ isOpen, handleOpen }: Props) => {
     return (
         <StyledHeader id='home'>
-            <BurgerButton isOpen={isOpen} onClick={handleOpen}>
-                <span></span>
-            </BurgerButton>
-
-            <FlexWrapper align='center' justify='space-between'>
+            <FlexWrapper justify='center' wrap='wrap' gap='20px'>
                 <Wrapper>
+                    <BurgerButton isOpen={isOpen} onClick={handleOpen}>
+                        <span></span>
+                    </BurgerButton>
+
                     <Name>I’m Rayan Adlrdard </Name>
                     <MainTitle>
                         <TitleStyle>Front-end </TitleStyle>Developer
@@ -40,33 +41,34 @@ export const Header = ({ isOpen, handleOpen }: Props) => {
 
 const StyledHeader = styled.header`
     margin-bottom: 100px;
+    padding: 0 30px;
+
     background: linear-gradient(to right, ${theme.colors.secondaryBg}, ${theme.colors.secondaryBg}),
         url(${headerBackground});
     background-blend-mode: multiply;
-    background-size: 100% 100% cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover, auto;
+    background-position:
+        center,
+        center 30px;
 
     position: relative;
+
+    @media ${theme.media.mobile} {
+        & > ${FlexWrapper} {
+            gap: 50px;
+        }
+
+        margin-bottom: 50px;
+    }
 `;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: absolute;
     width: 40px;
     height: 25px;
-    margin-top: 20px;
-    margin-left: 60px;
+    margin-top: -50px;
     display: none;
-
-    /* ${(props) =>
-        props.isOpen &&
-        css<{ isOpen: boolean }>`
-            display: block;
-        `} */
-
-    @media ${theme.media.tabletXl} {
-        display: block;
-    }
 
     span {
         display: block;
@@ -74,8 +76,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         height: 2px;
         background-color: ${theme.colors.accent};
         position: absolute;
-        top: 10px;
-        right: 5px;
+        top: 0px;
+        left: 0px;
 
         &::before {
             content: '';
@@ -97,12 +99,24 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             transform: translateY(6px);
         }
     }
+
+    @media ${theme.media.tabletXl} {
+        display: block;
+    }
 `;
 
 const Wrapper = styled.div`
-    max-width: 560px;
+    max-width: 500px;
     width: 100%;
-    padding-left: 60px;
+    padding-top: 92px;
+    position: relative;
+
+    @media ${theme.media.tabletXl} {
+        padding-top: 100px;
+    }
+    @media ${theme.media.tablet} {
+        padding-top: 100px;
+    }
 `;
 
 const Name = styled.h2`
@@ -110,23 +124,22 @@ const Name = styled.h2`
 `;
 
 const MainTitle = styled.h1`
-    font-size: 48px;
-    font-weight: 700;
+    ${font({ size: '48px', weight: 700 })}
 `;
 
 const TitleStyle = styled.span`
-    font-size: 48px;
-    font-weight: 700;
-    color: ${theme.colors.accent};
+    ${font({ size: '48px', weight: 700, color: theme.colors.accent })}
 `;
 
 const Description = styled.p`
     margin: 18px 0 25px;
-    font-size: 16px;
-    line-height: 1.5;
-    text-transform: capitalize;
+    ${font({ size: '16px', lineHeight: 1.5, textTransform: 'capitalize' })}
     max-width: 425px;
     background-color: ${theme.colors.secondaryBg};
+
+    @media ${theme.media.mobile} {
+        margin: 80px 0 35px;
+    }
 `;
 
 const Photo = styled.img`

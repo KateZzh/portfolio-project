@@ -1,34 +1,33 @@
-import React from 'react';
 import { Icon } from '../../../../components/icon/Icon';
 import styled from 'styled-components';
 import { theme } from '../../../../styles/Theme';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
 
-type ServicePropsType = {
-    iconId: string;
-    title: string;
-    directions: string;
-    width: string;
-    height: string;
-    // serviceType: 'primary' | 'secondary'
+type Props = {
+    item: {
+        iconId: string;
+        title: string;
+        directions: string;
+        width: string;
+        height: string;
+    };
 };
 
-export const Service = (props: ServicePropsType) => {
+export const Service = ({ item }: Props) => {
     return (
         <StyledService>
             <FlexWrapper direction='column' align='center'>
-                <Icon iconId={props.iconId} width={props.width} height={props.height} />
-                <Title>{props.title}</Title>
-                <Info>{props.directions}</Info>
+                <Icon iconId={item.iconId} width={item.width} height={item.height} />
+                <Title>{item.title}</Title>
+                <Info>{item.directions}</Info>
             </FlexWrapper>
         </StyledService>
     );
 };
 
 const StyledService = styled.div`
-    width: 310px;
-    min-height: 225px;
-    /* height: 100%; */
+    width: 100%;
+    height: 100%;
     padding: 25px 10px 10px;
     background-color: ${theme.colors.secondaryBg};
     text-align: center;
@@ -48,5 +47,4 @@ const Info = styled.span`
     line-height: 1.6;
     text-transform: capitalize;
     color: ${theme.colors.fontSecondary};
-
 `;

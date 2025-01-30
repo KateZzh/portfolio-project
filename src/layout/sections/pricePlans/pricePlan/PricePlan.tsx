@@ -40,8 +40,8 @@ export const PricePlan = ({ priceCard }: { priceCard: priceCardPropsType }) => {
 
 const StyledPricePlan = styled.div<{ type: string }>`
     background-color: ${theme.colors.secondaryBg};
-    max-width: 310px;
-    width: 100%;
+    /* max-width: 310px; */
+    /* width: 310px; */
     padding: 54px 30px 25px;
 
     display: flex;

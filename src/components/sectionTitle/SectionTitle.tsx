@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { font } from '../../styles/Common';
 
 type SectionTitlePropsType = {
     title: string;
@@ -23,8 +24,7 @@ const Title = styled.h2`
 `;
 
 const Description = styled.p`
-    line-height: 1.6;
-    text-transform: capitalize;
+    ${font({ lineHeight: 1.6, textTransform: 'capitalize' })}
     margin: 25px auto 50px;
     max-width: 438px;
 `;

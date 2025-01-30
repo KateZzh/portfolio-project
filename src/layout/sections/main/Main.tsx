@@ -35,14 +35,14 @@ export const Main = () => {
 
                 <Header isOpen={open} handleOpen={handleOpen} />
                 <Services />
-                <PricePlans />
+                {/* <PricePlans /> */}
                 <Recommendations />
-                <Education />
-                <WorkHistory />
+                {/* <Education />
+                <WorkHistory /> */}
                 <Portfolio />
-                <Blog />
+                {/* <Blog />
                 <Contact />
-                <Footer />
+                <Footer /> */}
             </Container>
         </StyledMain>
     );
@@ -54,6 +54,10 @@ const StyledMain = styled.main`
 
     @media ${theme.media.tabletXl} {
         padding: 0 108px 0 0;
+    }
+
+    @media ${theme.media.tablet} {
+        padding: 0;
     }
 `;
 
@@ -76,14 +80,9 @@ const TabletSidebarWrapper = styled.div<{ isOpen: boolean }>`
         css<{ isOpen: boolean }>`
             display: block;
         `}
+
+    @media ${theme.media.mobile} {
+
+    }
 `;
 
-const MobileSidebarWrapper = styled.div<{ isOpen: boolean }>`
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99999;
-    background-color: ${theme.colors.secondaryBg};
-`;

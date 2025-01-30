@@ -65,13 +65,20 @@ export const PricePlans = () => {
                     description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
                 />
 
-                <FlexWrapper wrap='wrap' justify='space-between'>
+                <GridWrapper>
                     {priceCards.map((el) => (
                         <PricePlan key={el.id} priceCard={el} />
                     ))}
-                </FlexWrapper>
+                </GridWrapper>
         </StyledPrice>
     );
 };
 
 const StyledPrice = styled.section``;
+
+const GridWrapper = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    grid-auto-rows: minmax(610px, auto);
+    gap: 20px;
+`

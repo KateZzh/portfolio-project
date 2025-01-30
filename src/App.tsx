@@ -15,7 +15,9 @@ function App() {
                     <Sidebar />
                 </SidebarWrapper>
                 <Main />
-                <Nav />
+                <NavWrapper>
+                    <Nav />
+                </NavWrapper>
             </FlexWrapper>
         </div>
     );
@@ -24,6 +26,13 @@ function App() {
 const SidebarWrapper = styled.div`
     @media ${theme.media.tabletXl} {
         display: none;
-    }`;
+    }
+`;
+
+const NavWrapper = styled.div`
+    @media ${theme.media.tablet} {
+        display: none;
+    }
+`;
 
 export default App;

@@ -20,7 +20,9 @@ export const Footer = () => {
     );
 };
 
-const StyledFooter = styled.footer``;
+const StyledFooter = styled.footer`
+    padding-top: 35px;
+`;
 
 const Copyright = styled.small`
     font-weight: 400;

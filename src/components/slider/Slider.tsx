@@ -36,15 +36,17 @@ const recommendationData = [
     },
 ];
 
+const stars = [1, 2, 3, 4, 5];
+
 export const Slider = () => {
     return (
         <StyledSlider>
-            <FlexWrapper justify='space-between'>
+            <FlexWrapper justify='space-between' gap='10px'>
                 {recommendationData.map((el) => {
                     return (
                         <Slide key={el.id}>
                             <FlexWrapper gap='10px'>
-                                {[1, 2, 3, 4, 5].map((num, index) => {
+                                {stars.map((num, index) => {
                                     return <Icon key={index} iconId='star' fill={num <= el.rating ? theme.colors.accent : theme.colors.font} />;
                                 })}
                             </FlexWrapper>
@@ -74,7 +76,9 @@ export const Slider = () => {
     );
 };
 
-const StyledSlider = styled.div``;
+const StyledSlider = styled.div`
+overflow: auto;
+`;
 
 const Slide = styled.div`
     max-width: 310px;

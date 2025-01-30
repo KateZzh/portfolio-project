@@ -91,6 +91,10 @@ const StyledSidebar = styled.aside`
     z-index: 99;
     overflow-y: auto;
     height: 100vh;
+
+    @media ${theme.media.mobile} {
+        max-width: 375px;
+    }
 `;
 
 const CloseButton = styled.button`
@@ -99,8 +103,8 @@ const CloseButton = styled.button`
     display: none;
 
     position: absolute;
-    top: 20px;
-    left: 250px;
+    top: 35px;
+    right: 30px;
     z-index: 99;
 
     @media ${theme.media.tabletXl} {
